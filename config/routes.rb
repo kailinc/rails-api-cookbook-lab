@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
   resources :users, only: [:index, :show]
+  resources :ingredients, only: [:index, :show, :destroy, :update]
+  # created router for /ingredients
 end
